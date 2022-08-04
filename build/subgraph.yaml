@@ -1,0 +1,24 @@
+specVersion: 0.0.4
+schema:
+  file: schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Contract
+    network: bsc
+    source:
+      address: "0x4d6642Fb1f8e57359D06BD33442579eCBC1F7229"
+      abi: Contract
+      startBlock: 19512366
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Bid
+      abis:
+        - name: Contract
+          file: Contract/abis/Contract.json
+      eventHandlers:
+        - event: bidding(indexed address,uint256,uint256,uint256)
+          handler: handlebidding
+      file: Contract/Contract.wasm

@@ -2,9 +2,9 @@
   "name": "smartbid",
   "license": "UNLICENSED",
   "scripts": {
-    "codegen": "graph codegen",
+    "codegen": "graph codegen ./subgraph.yaml",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ smartbid",
+    "deploy": "graph deploy --product hosted-service --node https://api.thegraph.com/deploy/ joshuarotimi/smart-bid",
     "create-local": "graph create --node http://localhost:8020/ smartbid",
     "remove-local": "graph remove --node http://localhost:8020/ smartbid",
     "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 smartbid",
